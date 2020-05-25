@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script.js"></script>
+    <title>JS Examples</title>
+</head>
+<body>
+        <div class="container">
+
+            <form action="#" name="passGen">
+                <div class="col-xs-12">
+                        <input type="text" name="output" size="18" class="out" disabled><br>
+                        <input type="button" name="Generate Password" value="Generate Password"  class="btn btn-primary" onclick="populateForm(this.form.length.value)"><br>
+                                <strong style="font-size:12px">Password Length:</strong>
+                                <input type="text" name="length" size="3" value="6">
+
+                        
+
+                </div>
+                
+            </form>
+            <script>
+            
+            var keyList="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+            var temp="";
+
+            function generatePassword(passLength){
+                temp='';
+                for(i=0;i<passLength;i++){
+                    temp+=keyList.charAt(Math.floor(Math.random()*keyList.length))
+                }
+                return temp;
+
+            }
+
+            function populateForm(enterLength){
+                document.passGen.output.value=generatePassword(enterLength);
+            }
+
+            </script>
+            
+                    
+        <script src="./getDetails.js">
+        
+            //conditionals
+            
+        
+    </script>
+    </div>
+    
+    
+</body>
+</html>
